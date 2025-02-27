@@ -1,0 +1,254 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineer Portfolio</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1e1e1e;
+            color: #ddd;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #2e2e2e;
+            border-radius: 8px;
+            transition: background-color 0.5s;
+        }
+        h1 {
+            font-size: 36px;
+            color: #00ff00;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(30) 1s forwards, blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        @keyframes blink-caret {
+            50% {
+                border-color: transparent;
+            }
+        }
+        .section {
+            margin: 20px 0;
+            padding: 10px;
+            border-left: 4px solid #00ff00;
+            transition: transform 0.3s ease-in-out;
+        }
+        .query {
+            font-size: 20px;
+            color: #00ff00;
+            cursor: pointer;
+            margin: 10px 0;
+            transition: color 0.3s;
+        }
+        .query:hover {
+            color: #66ff66;
+            transform: scale(1.05);
+        }
+        .content {
+            padding-left: 20px;
+            margin-top: 10px;
+            display: none;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            line-height: 1.5;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .highlight {
+            color: #ff5733;
+        }
+        .highlight-query {
+            font-weight: bold;
+        }
+        .code-block {
+            background-color: #222;
+            color: #9bcdff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+        .graph {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #444;
+            color: #fff;
+            border-radius: 8px;
+        }
+        .graph p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .contact-details {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact-details a {
+            color: #00ff00;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-details a:hover {
+            color: #66ff66;
+            text-decoration: underline;
+        }
+        .toggle-btn {
+            font-size: 22px;
+            color: #00ff00;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #333;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+        .toggle-btn:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>ABHISHEK B - Data Engineer</h1>
+        <div class="contact-details">
+            <p>b.abhishek1984@gmail.com | +1 (469) 269-6850 | Irving, USA | <a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+        </div>
+
+        <!-- Dark/Light Mode Switch -->
+        <div class="toggle-btn" id="modeSwitch">
+            <span id="modeIcon">🌙</span> Switch Mode
+        </div>
+
+        <!-- About Me Section -->
+        <div class="section">
+            <h2 class="query">SELECT About Me FROM resume WHERE role = 'Data Engineer';</h2>
+            <div class="content">
+                <p>I don’t just work with data—I bring it to life. As a Data Engineer, I thrive on designing powerful pipelines, optimizing databases, and transforming raw data into meaningful insights. Every dataset tells a story, and I’m passionate about uncovering its hidden patterns to drive innovation. For me, data isn’t just numbers—it’s the fuel that powers smarter decisions, sharper strategies, and groundbreaking solutions.</p>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <h2 class="query">SELECT skills FROM Resume WHERE role = 'Data Engineer';</h2>
+            <div class="content">
+                <p><span class="highlight">Languages & Packages</span>: Python, R, SQL, PySpark, Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow, Keras</p>
+                <p><span class="highlight">Data Tools</span>: Apache Spark, Hive, HBase, Kafka, Databricks, Snowflake, MongoDB, Cassandra, AWS (S3, RDS, Lambda, EC2), Azure Data Factory</p>
+                <p><span class="highlight">DevOps & CI/CD</span>: Jenkins, Docker, Kubernetes, Terraform, Git, GitHub, Maven</p>
+                <div class="graph">
+                    <h4>Tools in Action:</h4>
+                    <p><strong>Data Processing:</strong> Apache Spark + Kafka + Databricks</p>
+                    <p><strong>Data Storage:</strong> Snowflake + MongoDB</p>
+                    <p><strong>Real-time Streaming:</strong> Kafka + Spark Streaming</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="section">
+            <h2 class="query">SELECT experience FROM resume WHERE role = 'Data Engineer';</h2>
+            <div class="content">
+                <p><span class="highlight">Data Analyst, Mastercard</span> | Aug 2023 – Present | New York, USA</p>
+                <ul>
+                    <li>Developed and optimized SQL queries for data extraction, transformation, and reporting using PostgreSQL, MySQL, and Redshift.</li>
+                    <li>Built and maintained ETL pipelines using Apache Spark, Hive, and Databricks to process large-scale datasets.</li>
+                    <li>Designed and implemented machine learning models using scikit-learn, TensorFlow, and PyTorch for predictive analytics and classification tasks.</li>
+                    <li>Deployed containerized ML models using Docker and orchestrated them on AWS (EC2, Lambda, S3, RDS).</li>
+                    <li>Engineered real-time data processing solutions leveraging Kafka, Spark Streaming, and AWS Kinesis.</li>
+                    <li>Applied Bayesian inference, parametric, and non-parametric statistical models for A/B testing and experiment design.</li>
+                    <li>Developed RESTful APIs to serve ML models and integrated them into microservices architecture.</li>
+                    <li>Improved data processing efficiency by implementing distributed computing strategies using MapReduce and Hadoop.</li>
+                    <li>Conducted feature engineering and data preprocessing for ML pipelines, ensuring data quality and consistency.</li>
+                    <li>Collaborated with cross-functional teams to drive data-driven decision-making and optimize business performance metrics.</li>
+                </ul>
+
+                <p><span class="highlight">Data Analyst, Southern Arkansas University</span> | Jan 2022 – May 2023 | Bangalore, India</p>
+                <ul>
+                    <li>Mentor and Tutor for subjects MCIS 5103 Advanced Programming Concepts, MCIS 5133 Database Management Systems, Data Structures, and Algorithm.</li>
+                    <li>Worked with students, 1-on-1, by reviewing homework, answering questions, and debugging programs with their course work.</li>
+                    <li>Worked on C, C++, SQL, and Java programming to help students understand Data Structures Concepts and apply correct functionality to generate expected outcomes.</li>
+                    <li>Actively involved in learning and developing Data Analytics Research Project using R-studio.</li>
+                    <li>Continuously monitored and maintained documentation in a time-to-time manner for easy understanding and reference.</li>
+                    <li>Managed diverse responsibilities, including updating online university inventory data, removing over 100 asset tags daily, and creating weekly technical documentation for SAU services across multiple departments.</li>
+                </ul>
+
+                <p><span class="highlight">Jr. Data Analyst, Sillconbricks Technologies</span> | Mar 2019 – Dec 2021 | On-site, India</p>
+                <ul>
+                    <li>Streamlined data integration and management using Azure Data Factory, SQL, and Azure Key Vaults, ensuring secure and efficient data transformations.</li>
+                    <li>Developed data pipelines for large-scale data processing and visualized insights using Power BI and Excel, enhancing decision-making and reporting.</li>
+                    <li>Utilized Python (pandas, NumPy) for data cleaning and preparation, and applied machine learning algorithms to predict customer churn from 10TB of data.</li>
+                    <li>Migrated data storage from Azure Data Lake to Azure SQL Database, improving query performance and analysis efficiency.</li>
+                    <li>Conducted real-time analytics with Spark Streaming in Azure Databricks and integrated Google Analytics insights for informed decision-making.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h2 class="query">SELECT education FROM resume WHERE role = 'Data Engineer';</h2>
+            <div class="content">
+                <p><span class="highlight">Masters in Computer and Information Sciences</span>, Southern Arkansas University</p>
+                <div class="graph">
+                    <h4>Key Learning:</h4>
+                    <p>Data Analysis, Big Data Processing, Machine Learning, Cloud Platforms (AWS, Azure)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle dark/light mode
+        const modeSwitch = document.getElementById('modeSwitch');
+        const modeIcon = document.getElementById('modeIcon');
+        const body = document.body;
+        let isDarkMode = true;
+
+        modeSwitch.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            if (isDarkMode) {
+                body.style.backgroundColor = '#1e1e1e';
+                body.style.color = '#ddd';
+                modeIcon.textContent = '🌙';
+            } else {
+                body.style.backgroundColor = '#fff';
+                body.style.color = '#000';
+                modeIcon.textContent = '🌞';
+            }
+        });
+
+        // Toggle content visibility
+        const queries = document.querySelectorAll('.query');
+        queries.forEach(query => {
+            query.addEventListener('click', () => {
+                const content = query.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                content.style.opacity = content.style.opacity === '1' ? '0' : '1';
+            });
+        });
+    </script>
+</body>
+</html>
